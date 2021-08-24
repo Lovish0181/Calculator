@@ -1,0 +1,59 @@
+<html>
+<head>
+    <title>
+    document
+    </title>
+    <script>
+    
+    function doSum()
+    { var vaStr=document.frm.txtA.value;
+    var vbStr=document.frm.txtB.value;
+    if(vaStr=="")
+    alert("value fill kar bachiii");
+    else
+    if(vbStr=="")
+    alert("je nah parega ta swwa chlu");
+    else
+    {
+    var Sum=parseInt(vaStr)+parseInt(vbStr);
+    document.frm.txtSum.value=Sum;
+    }
+    }
+    function doMulti(){
+    var vaStr=document.frm.txtA.value;
+    var vbStr=document.frm.txtB.value;
+        var Multi=vaStr*vbStr;
+        document.frm.txtMulti.value=Multi;
+    }
+     function doClear()
+        {
+            document.frm.txtA.value="";
+            document.frm.txtB.value="";
+            document.frm.txtSum.value="";
+            document.frm.txtMulti.value="";
+        }
+    </script>
+    </head>
+    <body> <center>
+        <form name="frm">
+            <table>
+            <tr>
+                <td colspan="2" align="center">Calculator</td></tr>
+            <tr>
+                <td>enter A</td>
+                <td><input type="text" name="txtA"></td></tr>
+            <tr>
+                <td>enter B</td>
+                <td><input type="text" name="txtB"></td></tr>
+                <td colspan="2" align="center">
+                <input type="button" value="Sum" onclick="doSum();">
+                <input type="button" value="Multi" onclick="doMulti();">
+                <input type="button" value="Clear" onclick="doClear();">
+                <input type="reset" value="reset">
+</td>             
+            <tr>
+            <td>Sum</td>
+            <td><input type="text" name="txtSum" disabled></td></tr>
+        <tr><td>Multi</td>
+            <td><input type="text" name="txtMulti" readonly></td></tr></table></form></center>
+    </body></html>
